@@ -1,7 +1,7 @@
 # Masker library for Go
 
 
-![branch status](https://github.com/coopnorge/go-masker-lib/actions/workflows/validate.yml/badge.svg?branch=main)
+![branch status](https://github.com/coopnorge/go-masker-lib/actions/workflows/pr.yml/badge.svg?branch=main)
 
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/coopnorge/go-masker-lib)](https://goreportcard.com/report/github.com/coopnorge/go-masker-lib)
