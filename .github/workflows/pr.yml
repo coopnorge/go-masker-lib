@@ -19,7 +19,7 @@ jobs:
       issues: write
     steps:
       - name: Cache xdg
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.XDG_CACHE_HOME }}
           key: xdg-v1-${{ hashFiles('**/Makefile') }}
