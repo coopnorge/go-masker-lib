@@ -1,4 +1,4 @@
-FROM golang:1.19.0-buster@sha256:a7a23f1fba8390b1e038f017c85259c878f406301643653ec6e5b97e75668789
+FROM golang:1.19.2-buster@sha256:535a9d6a746bfdb02e6c2b506c62aaeb72b8327bcc7e17a5f2cc831a6b4026c2
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
