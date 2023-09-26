@@ -52,14 +52,13 @@ func TestCensoredStringExample(t *testing.T) {
 
 ## Developing
 
-
 ```bash
 # build images
 docker-compose build
 # see available targets
-docker-compose run --rm devtools make help
+docker-compose run --rm golang-devtools make help
 # validate
-docker-compose run --rm devtools make validate VERBOSE=all
+docker-compose run --rm golang-devtools make validate VERBOSE=all
 # run in watch mode
-docker-compose run --rm devtools make watch
+docker-compose run --rm golang-devtools make watch
 ```
