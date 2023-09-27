@@ -53,7 +53,7 @@ jobs:
       - name: Install toolchain
         run: make toolchain
       - name: Validate
-        run: make validate
+        run: make validate-dynamic
 
   build:
     needs:
