@@ -99,7 +99,7 @@ publish-coverage: coverage.out ## publish code coverage
 ########################################################################
 
 golangci_lint_bin=$(tools_dir)golangci-lint
-golangci_lint_version=1.43.0
+golangci_lint_version=1.54.2
 golangci_lint_qualified=golangci-lint-$(golangci_lint_version)-linux-amd64.tar.gz
 $(golangci_lint_bin): | $(tools_dir) $(XDG_CACHE_HOME)/
 	cd $(XDG_CACHE_HOME) \
