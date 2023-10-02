@@ -6,7 +6,6 @@ package example
 
 import (
 	"encoding/json"
-	"fmt"
 	"testing"
 
 	"github.com/coopnorge/go-masker-lib"
@@ -20,7 +19,7 @@ func TestCensoredStringExample(t *testing.T) {
 	protectedValue := masker.CensoredString(secretValue)
 
 	// The protected value will not appear in formatted output.
-	assert.NotContains(t, fmt.Sprintf("%s", protectedValue), secretValue)
+	assert.NotContains(t, protectedValue.String(), secretValue)
 
 	// The protected value will not appear in marshalled output.
 	m, err := json.Marshal(protectedValue)
@@ -28,5 +27,5 @@ func TestCensoredStringExample(t *testing.T) {
 	assert.NotContains(t, m, secretValue)
 
 	// The underlying secret value can be revealed.
-	assert.Equal(t, fmt.Sprintf("%s", protectedValue.UnmaskString()), secretValue)
+	assert.Equal(t, protectedValue.UnmaskString(), secretValue)
 }
