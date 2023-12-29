@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 )
 
 type valueContainer struct {
@@ -57,7 +57,7 @@ func (suite *CensoredStringTestSuite) TestMarshalJSON() {
 	suite.Equal(fmt.Sprintf("{\"Value\":\"%s\"}", CensoredText), string(pmj))
 }
 
-// TestJSONUnmarshal tests that YAML can be unmarshalled into a CensoredString.
+// TestUnmarshalYAML tests that YAML can be unmarshalled into a CensoredString.
 func (suite *CensoredStringTestSuite) TestUnmarshalYAML() {
 	container := &valueContainer{}
 	suite.Equal("", container.Value.UnmaskString())
