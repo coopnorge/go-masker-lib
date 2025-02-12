@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: go-masker-lib
+  title: Go Masker Library
+  tags:
+    - "go"
+    - "pkg"
+  annotations:
+    github.com/project-slug: coopnorge/go-masker-lib
+    backstage.io/techdocs-ref: dir:.
+  links:
+    - title: Go Package Documentation
+      url: https://pkg.go.dev/github.com/coopnorge/go-masker-lib
+spec:
+  type: library
+  lifecycle: experimental
+  owner: engineering
