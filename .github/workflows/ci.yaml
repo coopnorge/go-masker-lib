@@ -42,13 +42,24 @@ jobs:
       - name: Validate
         run: docker compose run --rm ${{ env.docker-compose-service }} validate VERBOSE=all
 
+  techdocs:
+    permissions:
+      contents: read
+      id-token: write
+      packages: read
+      pull-requests: read
+    name: TechDocs
+    uses: coopnorge/github-workflow-techdocs/.github/workflows/techdocs.yaml@v0
+
   build:
     needs:
       - golang-ci
+      - techdocs
     if: always()
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
         name: "Catch errors"
         if: |
-          needs.golang-ci.result == 'failure'
+          needs.golang-ci.result == 'failure' ||
+          needs.techdocs.result == 'failure'

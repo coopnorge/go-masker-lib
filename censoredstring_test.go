@@ -48,7 +48,7 @@ func (suite *CensoredStringTestSuite) TestUnmarshalJSON() {
 	suite.Equal(suite.clear, container.Value.UnmaskString())
 }
 
-// a CensoredString is censored when it is marshalled to JSON.
+// TestMarshalJSON tests that a CensoredString is censored when it is marshalled to JSON.
 func (suite *CensoredStringTestSuite) TestMarshalJSON() {
 	container := &valueContainer{Value: suite.masked}
 	pmj, err := json.Marshal(container)
@@ -69,17 +69,17 @@ func (suite *CensoredStringTestSuite) TestUnmarshalYAML() {
 
 // TestStringFormat tests that a CensoredString is censored when formatted as a string.
 func (suite *CensoredStringTestSuite) TestStringFormat() {
-	suite.Equal(CensoredText, suite.masked.String())
-	suite.Equal(CensoredText, CensoredString("").String())
+	suite.Equal(CensoredText, fmt.Sprintf("%s", suite.masked))
+	suite.Equal(CensoredText, fmt.Sprintf("%s", CensoredString("")))
 }
 
-// TestUnmarshalYAML tests that a CensoredString is censored when formatted with default format.
+// TestDefaultFormat tests that a CensoredString is censored when formatted with default format.
 func (suite *CensoredStringTestSuite) TestDefaultFormat() {
 	suite.Equal(CensoredText, fmt.Sprintf("%v", suite.masked))
 	suite.Equal(CensoredText, fmt.Sprintf("%v", CensoredString("")))
 }
 
-// TestUnmarshalYAML tests that a CensoredString is censored when formatted as go representation.
+// TestGoRepresentationFormat tests that a CensoredString is censored when formatted as go representation.
 func (suite *CensoredStringTestSuite) TestGoRepresentationFormat() {
 	suite.Equal(fmt.Sprintf("\"%s\"", CensoredText), fmt.Sprintf("%#v", suite.masked))
 	suite.Equal(fmt.Sprintf("\"%s\"", CensoredText), fmt.Sprintf("%#v", CensoredString("")))
