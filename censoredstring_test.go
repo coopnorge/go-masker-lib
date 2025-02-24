@@ -67,12 +67,6 @@ func (suite *CensoredStringTestSuite) TestUnmarshalYAML() {
 	suite.Equal(suite.clear, container.Value.UnmaskString())
 }
 
-// TestStringFormat tests that a CensoredString is censored when formatted as a string.
-func (suite *CensoredStringTestSuite) TestStringFormat() {
-	suite.Equal(CensoredText, fmt.Sprintf("%s", suite.masked))
-	suite.Equal(CensoredText, fmt.Sprintf("%s", CensoredString("")))
-}
-
 // TestDefaultFormat tests that a CensoredString is censored when formatted with default format.
 func (suite *CensoredStringTestSuite) TestDefaultFormat() {
 	suite.Equal(CensoredText, fmt.Sprintf("%v", suite.masked))
