@@ -19,3 +19,6 @@ var/
 
 # Go workspace file
 go.work
+
+.vale
+!./.vale/styles/config/vocabularies/General

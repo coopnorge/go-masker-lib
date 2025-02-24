@@ -23,12 +23,12 @@ func (s CensoredString) MarshalText() ([]byte, error) {
 	return []byte(s.String()), nil
 }
 
-// String returns the native format for a CensoredString value, which will invariably be the CensoredString constant.
+// String returns the native format for a CensoredString value, which will invariably be the value of the CensoredText constant.
 func (s CensoredString) String() string {
 	return CensoredText
 }
 
-// GoString returns the Go syntax for a CensoredString value, which will invariably be the Go syntax for the CensoredString constant.
+// GoString returns the Go syntax for a CensoredString value, which will invariably be the Go syntax for the CensoredText constant.
 func (s CensoredString) GoString() string {
 	return fmt.Sprintf("%#v", s.String())
 }
