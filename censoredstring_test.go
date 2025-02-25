@@ -57,6 +57,12 @@ func (suite *CensoredStringTestSuite) TestMarshalJSON() {
 	suite.Equal(fmt.Sprintf("{\"Value\":\"%s\"}", CensoredText), string(pmj))
 }
 
+// TestStringFormat tests that a CensoredString is censored when formatted as a string.
+func (suite *CensoredStringTestSuite) TestStringFormat() {
+	suite.Equal(CensoredText, fmt.Sprintf("%s", suite.masked))
+	suite.Equal(CensoredText, fmt.Sprintf("%s", CensoredString("")))
+}
+
 // TestUnmarshalYAML tests that YAML can be unmarshalled into a CensoredString.
 func (suite *CensoredStringTestSuite) TestUnmarshalYAML() {
 	container := &valueContainer{}
