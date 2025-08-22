@@ -13,12 +13,12 @@ See [./docs/index.md](./docs/index.md)
 ## Developing
 
 ```bash
+# install go tools
+go install tool
 # build images
-docker-compose build
+go tool mage build
 # see available targets
-docker-compose run --rm golang-devtools make help
+go tool mage -l
 # validate
-docker-compose run --rm golang-devtools make validate VERBOSE=all
-# run in watch mode
-docker-compose run --rm golang-devtools make watch
+go tool mage validate
 ```
