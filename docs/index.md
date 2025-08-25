@@ -6,4 +6,4 @@ such as string formatting, logging and marshalling to JSON or YAML.
 
 Module documentation
 
-<https://pkg.go.dev/github.com/coopnorge/go-datadog-lib/v2>
+<https://pkg.go.dev/github.com/coopnorge/go-masker-lib>
