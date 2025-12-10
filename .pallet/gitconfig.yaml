@@ -1,0 +1,20 @@
+apiVersion: github.coop.no/v1alpha1
+kind: RepositoryConfig
+metadata:
+  name: go-masker-lib
+spec:
+  description: "This library provides various types to facilitate the protection of sensitive data that should not be exposed."
+
+  branches:
+    default: main
+    protection:
+      - id: main
+        pattern: main
+        requireSignedCommits: false
+        requiredStatusChecks:
+          checks:
+            - "build"
+            - "policy-bot: main"
+            - "Supply Chain / Validate"
+        requiredPullRequestReviews:
+          requireCodeOwnerReviews: false
