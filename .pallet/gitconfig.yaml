@@ -20,3 +20,4 @@ spec:
             - "Supply Chain / Validate"
         requiredPullRequestReviews:
           requireCodeOwnerReviews: false
+
