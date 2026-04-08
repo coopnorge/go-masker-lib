@@ -21,6 +21,7 @@ approval_rules:
     only_has_contributors_in:
       users:
       - "dependabot[bot]"
+      - "renovate-coop-norge[bot]"
     only_changed_files:
       paths:
       - "^go.mod$"
