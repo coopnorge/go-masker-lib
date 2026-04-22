@@ -3,9 +3,18 @@ kind: Component
 metadata:
   name: go-masker-lib
   title: Go Masker Library
+  description: >-
+    Masking library for protecting sensitive data in Go. Provides types that
+    automatically mask values in string formatting, logging and JSON/YAML
+    marshalling. Use whenever handling PII or other sensitive data to prevent
+    accidental exposure in logs or error messages.
   tags:
-    - "go"
-    - "pkg"
+    - go
+    - security
+    - gdpr
+    - pii
+    - masking
+    - personal-data
   annotations:
     github.com/project-slug: coopnorge/go-masker-lib
     backstage.io/techdocs-ref: dir:.
@@ -14,5 +23,5 @@ metadata:
       url: https://pkg.go.dev/github.com/coopnorge/go-masker-lib
 spec:
   type: library
-  lifecycle: experimental
+  lifecycle: production
   owner: engineering
