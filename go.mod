@@ -3,13 +3,13 @@ module github.com/coopnorge/go-masker-lib
 go 1.27.1
 
 require (
-	github.com/coopnorge/mage v0.39.2
+	github.com/coopnorge/mage v0.42.0
 	github.com/stretchr/testify v1.12.1
 	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
-	github.com/bmatcuk/doublestar/v4 v4.10.0 // indirect
+	github.com/bmatcuk/doublestar/v4 v4.10.2 // indirect
 	github.com/datolabs-io/go-backstage/v3 v3.2.0 // indirect
 	github.com/hashicorp/go-version v1.9.0 // indirect
 	github.com/magefile/mage v1.17.2 // indirect
