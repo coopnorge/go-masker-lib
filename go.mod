@@ -3,7 +3,7 @@ module github.com/coopnorge/go-masker-lib
 go 1.27.1
 
 require (
-	github.com/coopnorge/mage v0.42.0
+	github.com/coopnorge/mage v0.42.1
 	github.com/stretchr/testify v1.12.1
 	gopkg.in/yaml.v3 v3.0.1
 )
